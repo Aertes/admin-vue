@@ -8,8 +8,11 @@ import './lib/jquery-vender.js'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'font-awesome/css/font-awesome.css'
+import './assets/dist/js/jquery.dataTables.min.js'
+import './assets/dist/js/dataTables.bootstrap.min.js'
 import './assets/dist/js/adminlte.min.js'
 import './assets/dist/css/AdminLTE.min.css'
+import './assets/dist/css/dataTables.bootstrap.min.css'
 import './assets/dist/css/skins/_all-skins.min.css'
 
 Vue.config.productionTip = false
