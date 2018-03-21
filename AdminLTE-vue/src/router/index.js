@@ -1,21 +1,40 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import starter from '@/components/starter'
+import orgIndex from '@/components/content/org/index'
+import userIndex from '@/components/content/user/index'
+import roleIndex from '@/components/content/role/index'
+import logIndex from '@/components/content/log/index'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
-      name: 'starter',
-      component: starter
+      name: 'userIndex',
+      component: userIndex
     },
     {
-      path: '/hello',
-      name: 'HelloWorld',
-      component: HelloWorld
-    }
+      path: '/content/org',
+      name: 'orgIndex',
+      component: orgIndex,
+
+    },
+    {
+      path: '/content/user',
+      name: 'userIndex',
+      component: userIndex
+    },
+    {
+      path: '/content/role',
+      name: 'roleIndex',
+      component: roleIndex
+    },
+    {
+      path: '/content/log',
+      name: 'logIndex',
+      component: logIndex
+    },
   ]
 })
