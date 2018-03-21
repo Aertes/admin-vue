@@ -14,15 +14,6 @@
                     <label>登录账号</label>
                     <input class="key search moreWidthText" type="text" name="username" style="height: 30px;" />
                 </div>
-                <div class="floatL autoFill ieHack">
-                    <label>用户角色</label>
-                    <select class="borderRadius5 key moreWidthselect search" name="roleId">
-                        <option selected="selected" value="">全部</option>
-                    </select>
-                </div>
-                <div class="floatL autoFill ieHack">
-                    <label>用户状态</label>
-                </div>
                 <div class="sumbit floatL autoFill ieHack">
                     <input type="button" class="submit" id="formSubmit" value="搜 索" />
                 </div>
@@ -478,6 +469,57 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  methods: {
+      
+  },
+  mounted(){
+      this.dataTable = $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false
+        });
   }
 }
 </script>
+
+<style>
+form .autoFill {
+    margin: 10px 0px;
+    /* width: 307px; */
+    height: 30px;
+    line-height: 30px;
+}
+.floatL {
+    float: left;
+}
+label {
+    font-weight: normal;
+    font-size: 14px;
+}
+.search .key {
+    width: 200px;
+    height: 30px;
+    /* line-height: 30px; */
+    border: 1px solid #b2b2b2;
+    margin: 0 10px;
+}
+.search .search {
+    padding: 0 0 0 5px;
+}
+.sumbit input, .btnstyle, .btnedit, .sumbit a {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background: #3B5571;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+</style>
+
