@@ -74,8 +74,8 @@ select {
   float: right;
 }
 .content-header > .breadcrumb {
-  position: initial;
-  float: left;
+  position: static;
+  float: inherit;
 }
 .marginLeft20 {
   margin-left: 20px;
@@ -107,9 +107,15 @@ table.table-bordered.dataTable {
   background: #4b96cd;
   border-radius: 5px;
 }
+.breadcrumb > li + li:before {
+  vertical-align: 1px;
+}
 /**index**/
+.content {
+  padding: 0 15px;
+}
 .content_all {
-  padding: 20px;
+  padding: 10px 5px;
   box-sizing: border-box;
 }
 .content_all .treeList {
