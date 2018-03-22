@@ -1,5 +1,70 @@
+@charset "utf-8";
+body,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form,
+li,
+textarea {
+  margin: 0;
+}
+html,
+body {
+  font-family: 'Microsoft Yahei', '微软雅黑';
+}
+input,
+textarea {
+  padding: 0;
+}
+th,
+tr {
+  font-weight: normal;
+}
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+label {
+  font-weight: normal;
+}
+/*body{font-size:12px;font-family:"SimSun";}*/
+a,
+a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+a:hover {
+  color: #333;
+  text-decoration: underline;
+  cursor: pointer;
+}
+a:focus {
+  outline: none;
+}
+body {
+  /*background-color: #dbdbdb;*/
+}
+html {
+  overflow-y: scroll;
+}
 select {
-  vertical-align: middle;
   color: #a2a2a2;
 }
 .floatL {
@@ -12,6 +77,27 @@ select {
   position: initial;
   float: left;
 }
+.marginLeft20 {
+  margin-left: 20px;
+}
+.gray {
+  background-color: #ccc;
+}
+.create {
+  margin-bottom: 20px;
+}
+table.table-bordered.dataTable {
+  border-collapse: collapse !important;
+  border-radius: 5px !important;
+  border-color: #4b96cd;
+}
+.table thead tr {
+  color: #fff;
+  font-weight: normal;
+  background: #4b96cd;
+  border-radius: 5px;
+}
+/**index**/
 .content_all {
   padding: 20px;
   box-sizing: border-box;
@@ -29,44 +115,85 @@ select {
 .content_all .detaillist {
   width: 82%;
 }
-.content_all .detaillist .search_box {
+.content_all .search_box {
   border: 1px solid #4B96CD;
   border-radius: 5px;
   margin-bottom: 20px;
 }
-.content_all .detaillist .search_box .search_title {
+.content_all .search_box .search_title {
   background: #4B96CD;
   padding: 10px 20px;
   box-sizing: border-box;
   color: #fff;
 }
-.content_all .detaillist .search_box form {
+.content_all .search_box form {
   padding: 20px;
   box-sizing: border-box;
 }
-.content_all .detaillist .search_box form .autoFill {
+.content_all .search_box form .autoFill {
   margin: 10px 0px;
   height: 30px;
   line-height: 30px;
 }
-.content_all .detaillist .search_box form .autoFill label {
+.content_all .search_box form .autoFill label {
   font-weight: normal;
   font-size: 14px;
 }
-.content_all .detaillist .search_box form .autoFill .moreWidthText {
+.content_all .search_box form .autoFill .moreWidthText {
   width: 200px;
   /* margin-left: 0; */
 }
-.content_all .detaillist .search_box form .autoFill .search {
+.content_all .search_box form .autoFill .search {
   padding: 0 0 0 5px;
   border: 1px solid #b2b2b2;
   margin: 0 10px;
   height: 30px;
   width: 160px;
 }
-.content_all .detaillist .search_box form .autoFill .submit {
-  margin-top: 2px;
-}
-.content_all .detaillist .search_box form .autoFill .btn {
+.content_all .search_box form .autoFill .btn {
   padding: 4px 15px;
+}
+/**create**/
+.validateCheck .formlist {
+  width: 500px;
+  margin: auto;
+  padding: 10px;
+}
+.validateCheck .formlist label {
+  display: block;
+  float: left;
+  width: 75px;
+  text-align: right;
+  position: relative;
+  margin: 10px;
+  line-height: 30px;
+}
+.validateCheck .formlist label em {
+  color: #CC0000;
+  position: absolute;
+  right: -10px;
+  top: 0;
+}
+.validateCheck .formlist .textbox {
+  float: left;
+  height: 30px;
+  border: 1px solid #b2b2b2;
+  display: block;
+  margin: 10px;
+  padding: 0 10px;
+  position: relative;
+  width: 200px;
+}
+.validateCheck .formlist .searchselect {
+  width: 200px;
+  height: 30px;
+  border: 1px solid #b2b2b2;
+  margin: 10px;
+  padding: 5px 4px;
+}
+.validateCheck .btnsumbit {
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
 }
