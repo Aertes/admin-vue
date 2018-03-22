@@ -86,6 +86,16 @@ select {
 .create {
   margin-bottom: 20px;
 }
+.btn {
+  padding: 4px 15px;
+  border-radius: 0;
+}
+.Wdate {
+  height: 30px !important;
+  margin-left: 10px;
+  width: 160px;
+  padding-left: 5px;
+}
 table.table-bordered.dataTable {
   border-collapse: collapse !important;
   border-radius: 5px !important;
@@ -110,14 +120,12 @@ table.table-bordered.dataTable {
   max-height: 400px;
   overflow: auto;
   position: relative;
-  border-radius: 5px;
 }
 .content_all .detaillist {
   width: 82%;
 }
 .content_all .search_box {
   border: 1px solid #4B96CD;
-  border-radius: 5px;
   margin-bottom: 20px;
 }
 .content_all .search_box .search_title {
@@ -149,9 +157,6 @@ table.table-bordered.dataTable {
   margin: 0 10px;
   height: 30px;
   width: 160px;
-}
-.content_all .search_box form .autoFill .btn {
-  padding: 4px 15px;
 }
 /**create**/
 .validateCheck .formlist {
@@ -190,6 +195,13 @@ table.table-bordered.dataTable {
   border: 1px solid #b2b2b2;
   margin: 10px;
   padding: 5px 4px;
+}
+.validateCheck .formlist .textarea {
+  width: 200px;
+  height: 100px;
+  margin: 10px;
+  border: 1px solid #b2b2b2;
+  resize: none;
 }
 .validateCheck .btnsumbit {
   text-align: center;
