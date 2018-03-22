@@ -1,0 +1,72 @@
+select {
+  vertical-align: middle;
+  color: #a2a2a2;
+}
+.floatL {
+  float: left;
+}
+.floatR {
+  float: right;
+}
+.content-header > .breadcrumb {
+  position: initial;
+  float: left;
+}
+.content_all {
+  padding: 20px;
+  box-sizing: border-box;
+}
+.content_all .treeList {
+  width: 17%;
+  border: 1px solid #4b96cd;
+  margin-right: 1%;
+  min-height: 400px;
+  max-height: 400px;
+  overflow: auto;
+  position: relative;
+  border-radius: 5px;
+}
+.content_all .detaillist {
+  width: 82%;
+}
+.content_all .detaillist .search_box {
+  border: 1px solid #4B96CD;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.content_all .detaillist .search_box .search_title {
+  background: #4B96CD;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.content_all .detaillist .search_box form {
+  padding: 20px;
+  box-sizing: border-box;
+}
+.content_all .detaillist .search_box form .autoFill {
+  margin: 10px 0px;
+  height: 30px;
+  line-height: 30px;
+}
+.content_all .detaillist .search_box form .autoFill label {
+  font-weight: normal;
+  font-size: 14px;
+}
+.content_all .detaillist .search_box form .autoFill .moreWidthText {
+  width: 200px;
+  /* margin-left: 0; */
+}
+.content_all .detaillist .search_box form .autoFill .search {
+  padding: 0 0 0 5px;
+  border: 1px solid #b2b2b2;
+  margin: 0 10px;
+  height: 30px;
+  width: 160px;
+}
+.content_all .detaillist .search_box form .autoFill .submit {
+  margin-top: 2px;
+}
+.content_all .detaillist .search_box form .autoFill .btn {
+  padding: 4px 15px;
+}
