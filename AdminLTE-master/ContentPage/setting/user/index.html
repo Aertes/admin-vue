@@ -549,84 +549,84 @@ desired effect
 			};
 			zTreeObj = $.fn.zTree.init($("#treeDemo"), setting);
 
-			// table = $('#user_table').DataTable({
-			// 	"ajax": {
-			// 		// "url": "../../../json/user.json",
-			// 		"dataType":JSON,
-			// 		"method": "get",
-			// 		"data": function (d) {
-			// 			d.pageSize = d.length;
-			// 			d.pageNumber = d.start / d.length + 1;
-			// 			d.code = $('input[name=code]').val();
-			// 			d.name = $('input[name=name]').val();
-			// 			d.status = $('select[name=statusId]').val();
-			// 			d.role = $('select[name=roleId]').val();
-			// 			d.username = $('input[name=username]').val();
-			// 			d.orgId = $('#orgId').val();
-			// 			d.usernodeId = $("#usernodeId").val();
-			// 			d.nodeType = $("#node_type").val();
-			// 			var order = d.order[0];
-			// 			if (order) {
-			// 				var orderStr = d.columns[order.column].data;
+			table = $('#user_table').DataTable({
+				"ajax": {
+					"url": "../../../json/user.json",
+					"dataType":JSON,
+					"method": "get",
+					"data": function (d) {
+						d.pageSize = d.length;
+						d.pageNumber = d.start / d.length + 1;
+						d.code = $('input[name=code]').val();
+						d.name = $('input[name=name]').val();
+						d.status = $('select[name=statusId]').val();
+						d.role = $('select[name=roleId]').val();
+						d.username = $('input[name=username]').val();
+						d.orgId = $('#orgId').val();
+						d.usernodeId = $("#usernodeId").val();
+						d.nodeType = $("#node_type").val();
+						var order = d.order[0];
+						if (order) {
+							var orderStr = d.columns[order.column].data;
 
-			// 				orderStr += " " + order.dir.toString();
-			// 				d.orderBy = orderStr;
-			// 			} else {
-			// 				d.orderBy = "id asc"
-			// 			};
-			// 		}
-			// 	},
-			// 	"columns": [{
-			// 			"data": "name",
-			// 			"render": function (data, type, row) {
-			// 				return '<div class="center">' + data + '</div>';
-			// 			},
-			// 			"orderable": true
-			// 		},
-			// 		{
-			// 			"data": "code",
-			// 			"render": function (data, type, row) {
-			// 				/*var a = row.productCategory.name;*/
-			// 				return '<div class="center">' + data + '</div>';
-			// 			},
-			// 			"orderable": true
-			// 		},
-			// 		{
-			// 			"data": "username",
-			// 			"render": function (data, type, row) {
-			// 				return '<div class="center">' + data + '</div>';
-			// 			},
-			// 			"orderable": true
-			// 		},
-			// 		{
-			// 			"data": "status",
-			// 			"render": function (data, type, row) {
-			// 				return '<div class="center">' + data.name + '</div>';
-			// 			},
-			// 			"orderable": false
-			// 		},
-			// 		{
-			// 			"data": null,
-			// 			"render": function (data, type, row) {
-			// 				var html = " ";
-			// 				html += ' <div class="center">';
-			// 				html += '<a class="blue" href="${rc.contextPath}/user/detail/' + row.id +
-			// 					'" title="查看"><i class="icon-zoom-in bigger-130" ></i></a>';
-			// 				html += '<a class="green marginLR10" href="${rc.contextPath}/user/update/' + row.id +
-			// 					'" title="编辑"><i class="icon-pencil bigger-130"></i></a>';
-			// 				html += '<a class="red" data_id = "' + row.id +
-			// 					'"  title="禁用"><i class=" icon-ban-circle bigger-130" ></i></a>';
-			// 				html += '<a class="black" data_id = "' + row.id +
-			// 					'"  title="启用"><i class=" icon-ban-circle bigger-130" ></i></a>';
-			// 				html += '<a class="delete marginLR10"  data_id = "' + row.id +
-			// 					'"  title="删除"><i class="icon-trash bigger-130" ></i></a>';
-			// 				html += '</div>';
-			// 				return html;
-			// 			},
-			// 			"orderable": false
-			// 		}
-			// 	]
-			// });
+							orderStr += " " + order.dir.toString();
+							d.orderBy = orderStr;
+						} else {
+							d.orderBy = "id asc"
+						};
+					}
+				},
+				"columns": [{
+						"data": "name",
+						"render": function (data, type, row) {
+							return '<div class="center">' + data + '</div>';
+						},
+						"orderable": true
+					},
+					{
+						"data": "code",
+						"render": function (data, type, row) {
+							/*var a = row.productCategory.name;*/
+							return '<div class="center">' + data + '</div>';
+						},
+						"orderable": true
+					},
+					{
+						"data": "username",
+						"render": function (data, type, row) {
+							return '<div class="center">' + data + '</div>';
+						},
+						"orderable": true
+					},
+					{
+						"data": "status",
+						"render": function (data, type, row) {
+							return '<div class="center">' + data.name + '</div>';
+						},
+						"orderable": false
+					},
+					{
+						"data": null,
+						"render": function (data, type, row) {
+							var html = " ";
+							html += ' <div class="center">';
+							html += '<a class="blue" href="${rc.contextPath}/user/detail/' + row.id +
+								'" title="查看"><i class="icon-zoom-in bigger-130" ></i></a>';
+							html += '<a class="green marginLR10" href="${rc.contextPath}/user/update/' + row.id +
+								'" title="编辑"><i class="icon-pencil bigger-130"></i></a>';
+							html += '<a class="red" data_id = "' + row.id +
+								'"  title="禁用"><i class=" icon-ban-circle bigger-130" ></i></a>';
+							html += '<a class="black" data_id = "' + row.id +
+								'"  title="启用"><i class=" icon-ban-circle bigger-130" ></i></a>';
+							html += '<a class="delete marginLR10"  data_id = "' + row.id +
+								'"  title="删除"><i class="icon-trash bigger-130" ></i></a>';
+							html += '</div>';
+							return html;
+						},
+						"orderable": false
+					}
+				]
+			});
 
 			$("#formSubmit").click(function () {
 				table.ajax.reload();
