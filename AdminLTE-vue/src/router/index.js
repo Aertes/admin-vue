@@ -26,7 +26,7 @@ export default new Router({
       name: 'userIndex',
       component: userIndex,
     //   childrens: [{
-	// 	path: '/content/user',
+	  // 	path: '/content/user',
     //     name: 'creat',
     //     component:userCreat,
 
