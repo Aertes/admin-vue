@@ -554,33 +554,37 @@ export default {
           ]
         },
         { name: "父节点3 - 没有子节点", isParent: true }
-      ]
+      ],
+      params: {
+        userName: "",
+        userNumber: "",
+        accounts: "",
+        userRole: ""
+      }
     };
   },
   methods: {
-	  getUserDataTable(){
-		  this.axios.get({
-			  url:'json/user.json',
-			  params:{
-				  userName:'',
-				  userNumber:'',
-				  accounts:'',
-				  userRole:'',
-			  }
-		  }).then((res) => {
-			  this.data = res.data;
-			  this.dataTable = $("#example1").DataTable({
-				paging: true,
-				lengthChange: false,
-				searching: false,
-				ordering: true,
-				info: true,
-				autoWidth: false
-			});
-		  }, (err) => {
-			  console.log(err);
-		  })
-	  }
+    getUserDataTable() {
+		console.log(123);
+
+    //   this.axios.post("../json/user",{params:{userName: "",userNumber: "",accounts: "",userRole: ""}})
+    //     .then(
+    //       (res) => {
+    //         this.data = res.data;
+    //         this.dataTable = $("#example1").DataTable({
+    //           paging: true,
+    //           lengthChange: false,
+    //           searching: false,
+    //           ordering: true,
+    //           info: true,
+    //           autoWidth: false
+    //         });
+    //       },
+    //       (err) => {
+    //         console.log(err);
+    //       }
+    //     );
+    }
   },
   mounted() {
     this.getUserDataTable();
