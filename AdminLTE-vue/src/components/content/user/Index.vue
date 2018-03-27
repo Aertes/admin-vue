@@ -554,7 +554,8 @@ export default {
           ]
         },
         { name: "父节点3 - 没有子节点", isParent: true }
-      ],
+	  ],
+	  dataTable:[],
       params: {
         userName: "",
         userNumber: "",
@@ -565,29 +566,27 @@ export default {
   },
   methods: {
     getUserDataTable() {
-		console.log(123);
-
-    //   this.axios.post("../json/user",{params:{userName: "",userNumber: "",accounts: "",userRole: ""}})
-    //     .then(
-    //       (res) => {
-    //         this.data = res.data;
-    //         this.dataTable = $("#example1").DataTable({
-    //           paging: true,
-    //           lengthChange: false,
-    //           searching: false,
-    //           ordering: true,
-    //           info: true,
-    //           autoWidth: false
-    //         });
-    //       },
-    //       (err) => {
-    //         console.log(err);
-    //       }
-    //     );
+      this.$http.get("../static/user.json").then(
+          res => {
+			this.dataTable = res.data;
+			console.log(this.dataTable);
+          },
+          err => {
+            console.log(err);
+          }
+        );
     }
   },
   mounted() {
-    this.getUserDataTable();
+	this.getUserDataTable();
+	// this.dataTable = $("#example1").DataTable({
+	// 	paging: true,
+	// 	lengthChange: false,
+	// 	searching: false,
+	// 	ordering: true,
+	// 	info: true,
+	// 	autoWidth: false
+	// });
     $.fn.zTree.init($("#treeDemo"), this.setting, this.zNodes);
   }
 };
